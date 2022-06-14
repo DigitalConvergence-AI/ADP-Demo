@@ -13,15 +13,16 @@ export const ADPDemo = () =>  (
         console.log('ID: '+ ID);
         const currentYear = new Date().getFullYear();
         const previousYear = currentYear - 1;
-        const input = json.transactions;
+        const input = json.transactions.slice();
     
         //This will filter the data for previous year
         const filteredLastYear = input.filter(x => 
             new Date(x.timeStamp).getFullYear() == previousYear
         );
 
+        const filteredLastYearQ = filteredLastYear.slice();
         //  find the highest sum of total of a specific employee.
-        const result = Object.values(filteredLastYear
+        const result = Object.values(filteredLastYearQ
             .reduce((m, n) => (m[n.employee.id]
             ? (m[n.employee.id].amount += n.amount)
             : (m[n.employee.id] = { ...n }), m), {}));
@@ -31,7 +32,7 @@ export const ADPDemo = () =>  (
             ? prev : current);
 
         // get all the transactions of the employee(who has highest sum of amount in total) in the previous year
-        const allTrnx = filteredLastYear.filter
+        const allTrnx = filteredLastYearQ.filter
                 (x => x.employee.id === reduceQ.employee.id);
     
         console.log('Get all the transactions of last years top earner:');
