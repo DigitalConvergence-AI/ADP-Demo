@@ -1,0 +1,27 @@
+{
+  "name": "adp-demo",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "This include get & post request using plain javascript with no frameworks involved",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DigitalConvergence-AI/GetPostDemo.git"
+  },
+  "author": "Prabhurajan Govindasamy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DigitalConvergence-AI/GetPostDemo/issues"
+  },
+  "homepage": "https://github.com/DigitalConvergence-AI/GetPostDemo#readme",
+  "dependencies": {
+    "cross-fetch": "^3.1.5",
+    "install": "^0.13.0",
+    "node-fetch": "^3.2.6",
+    "npm": "^8.12.1"
+  }
+}
